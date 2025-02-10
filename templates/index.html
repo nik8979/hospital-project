@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>City Hospital.com</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body style="background-image: url('{{ url_for('static', filename='10130.jpg') }}'); background-size: cover; background-position: center; background-repeat: no-repeat;">
+    <header>
+        <h1>City Hospital</h1>
+        <p>Upload sensitive files of patient.</p>
+    </header>
+    
+    <div class="container">
+        <form id="fileForm" enctype="multipart/form-data">
+            <label for="fileInput">Choose a file to upload:</label>
+            <input type="file" id="fileInput" name="file" accept=".pdf,.doc,.docx,.jpg,.png" required>
+            <button type="submit">Upload</button>
+        </form>
+        <p id="message" class="message"></p>
+    </div>
+
+    
+    
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
